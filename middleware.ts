@@ -26,6 +26,11 @@ export function middleware(request: NextRequest) {
       url.hostname = "abc.co.uae";
       return NextResponse.redirect(url);
     }
+
+    if(country=== "RU"){
+        url.hostname = "abc.co.ru";
+        return NextResponse.redirect(url)
+    }
   }
 
   return NextResponse.next();
