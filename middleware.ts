@@ -16,7 +16,6 @@ export function middleware(request: NextRequest) {
 
   const url = request.nextUrl.clone();
 
-  if (host === "abc.com") {
     if (country === "ZA") {
       url.hostname = "abc.co.za";
       return NextResponse.redirect(url);
@@ -31,7 +30,6 @@ export function middleware(request: NextRequest) {
         url.hostname = "abc.co.ru";
         return NextResponse.redirect(url)
     }
-  }
 
   return NextResponse.next();
 }
